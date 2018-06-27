@@ -1,7 +1,7 @@
 
 ## About me
 
-Tord (SunyataZero on GitHub) has a Buddhist background, having practiced Buddhism and meditation for over ten years, and being influenced by the [Plum Village tradition](https://plumvillage.org/) which puts emphasis on mindfulness.
+Tord (SunyataZero on GitLab) has a Buddhist background, having practiced Buddhism and meditation for over ten years, and being influenced by the [Plum Village tradition](https://plumvillage.org/) which puts emphasis on mindfulness.
 
 
 ## Background
