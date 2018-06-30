@@ -46,20 +46,26 @@ class TimingSettingsWt(QtWidgets.QWidget):
         self.rest_reminder_reset_qpb.setIcon(QtGui.QIcon(mc.mc_global.get_icon_path("reload-2x.png")))
         self.rest_reminder_reset_qpb.setToolTip(self.tr("Reset the rest timer"))
 
-        notification_interval_qhl = QtWidgets.QHBoxLayout()
-        notification_interval_qhl.addWidget(QtWidgets.QLabel(self.tr("Interval every:")))
+        notification_interval_qll = QtWidgets.QLabel(self.tr("Interval every:"))
+        notification_interval_qll.setFixedWidth(100)
+        notification_interval_qhl = HorizontalBox()
+        notification_interval_qhl.addWidget(notification_interval_qll)
         notification_interval_qhl.addWidget(self.notification_interval_qsb)
         notification_interval_qhl.addWidget(QtWidgets.QLabel(self.tr("minutes")))
         notification_interval_qhl.addStretch(1)
 
-        show_after_qhl = QtWidgets.QHBoxLayout()
-        show_after_qhl.addWidget(QtWidgets.QLabel(self.tr("Show after:")))
+        show_after_qll = QtWidgets.QLabel(self.tr("Show after:"))
+        show_after_qll.setFixedWidth(100)
+        show_after_qhl = HorizontalBox()
+        show_after_qhl.addWidget(show_after_qll)
         show_after_qhl.addWidget(self.show_after_qsb)
         show_after_qhl.addWidget(QtWidgets.QLabel(self.tr("notifications")))
         show_after_qhl.addStretch(1)
 
-        rest_interval_qhl = QtWidgets.QHBoxLayout()
-        rest_interval_qhl.addWidget(QtWidgets.QLabel(self.tr("Interval every:")))
+        rest_interval_qll = QtWidgets.QLabel(self.tr("Interval every:"))
+        rest_interval_qll.setFixedWidth(100)
+        rest_interval_qhl = HorizontalBox()
+        rest_interval_qhl.addWidget(rest_interval_qll)
         rest_interval_qhl.addWidget(self.rest_interval_qsb)
         rest_interval_qhl.addWidget(QtWidgets.QLabel(self.tr("minutes")))
         rest_interval_qhl.addStretch(1)
@@ -183,7 +189,6 @@ class TimingOverviewWt(QtWidgets.QListWidget):
 
         self.addItem("Rest: " + str(settings.rest_reminder_interval) + " minutes")
         self.set_size_hint(counter_int - 1)
-        self.setFrameStyle(QtWidgets.QFrame.Panel | QtWidgets.QFrame.Raised)
 
     def set_size_hint(self, counter_int):
         self.item(counter_int).setSizeHint(

@@ -74,3 +74,10 @@ class ButtonGrid(QtWidgets.QGridLayout):
         if QtCore.QSysInfo.kernelType() != "darwin":
             self.setHorizontalSpacing(mc_global.BUTTON_BAR_HORIZONTAL_SPACING_LINUX)
 
+
+class HorizontalBox(QtWidgets.QHBoxLayout):
+    def __init__(self, *__args):
+        super().__init__(*__args)
+        if QtCore.QSysInfo.kernelType() != "darwin":
+            self.setSpacing(mc_global.HORIZONTAL_BOX_SPACING_LINUX)
+
